@@ -8,6 +8,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodie/screens/auth/sign_in_screen.dart';
+import 'package:foodie/screens/auth/verification_page.dart';
 
 import '../../components/buttons/socal_button.dart';
 import '../../components/welcome_text.dart';
@@ -70,12 +71,19 @@ class SignUpScreen extends StatelessWidget {
         password: passwordController.text,
       );
 
+      // Send email verification
+      await userCredential.user!.sendEmailVerification();
+
       // Hide platform-specific loading indicator
       Navigator.of(context).pop();
 
-      // Signed up
-      print('Signed up: ${userCredential.user}');
-      // Navigate to next screen or perform other actions
+      // Navigate to verification page
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => VerificationPage(email: emailController.text),
+        ),
+      );
     } on FirebaseAuthException catch (e) {
       // Hide platform-specific loading indicator
       Navigator.of(context).pop();
