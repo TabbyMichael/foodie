@@ -44,38 +44,42 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDL7NBb75DCd7pt0eq-TL9sihZijpljKkI',
-    appId: '1:340672372687:web:4645aa844d2f533c3bfcba',
-    messagingSenderId: '340672372687',
-    projectId: 'foodly-firebase-db709',
-    authDomain: 'foodly-firebase-db709.firebaseapp.com',
-    storageBucket: 'foodly-firebase-db709.appspot.com',
-    measurementId: 'G-Z3TRHNYG36',
+    apiKey: 'AIzaSyDZzQ8F1Hd3a95wPuvH9wMK4X2E7cVqD_8',
+    appId: '1:818688899000:web:a43ef87facb3320075414d',
+    messagingSenderId: '818688899000',
+    projectId: 'foodie-app-b6f8c',
+    authDomain: 'foodie-app-b6f8c.firebaseapp.com',
+    databaseURL: 'https://foodie-app-b6f8c-default-rtdb.firebaseio.com',
+    storageBucket: 'foodie-app-b6f8c.appspot.com',
+    measurementId: 'G-T1DGKN0Q6T',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBoDMHr9pj8wgqMljZlDA4ili31h0frcDY',
-    appId: '1:340672372687:android:1ef33420730ee7113bfcba',
-    messagingSenderId: '340672372687',
-    projectId: 'foodly-firebase-db709',
-    storageBucket: 'foodly-firebase-db709.appspot.com',
+    apiKey: 'AIzaSyBOLehHwjeaNc2zwKvC9sUmnQd-nx4ciXs',
+    appId: '1:818688899000:android:046a747fc8c400aa75414d',
+    messagingSenderId: '818688899000',
+    projectId: 'foodie-app-b6f8c',
+    databaseURL: 'https://foodie-app-b6f8c-default-rtdb.firebaseio.com',
+    storageBucket: 'foodie-app-b6f8c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDMdnEMq73rpLxdC-XUaQVJ2gUwSe_C9l0',
-    appId: '1:340672372687:ios:93a4d1b342c6f0e03bfcba',
-    messagingSenderId: '340672372687',
-    projectId: 'foodly-firebase-db709',
-    storageBucket: 'foodly-firebase-db709.appspot.com',
-    iosBundleId: 'com.example.foodlyFirebase',
+    apiKey: 'AIzaSyDPFIFJUbnqhfj8cG9l8VqcH21ZHAvxugI',
+    appId: '1:818688899000:ios:97aea39ff59f5d7675414d',
+    messagingSenderId: '818688899000',
+    projectId: 'foodie-app-b6f8c',
+    databaseURL: 'https://foodie-app-b6f8c-default-rtdb.firebaseio.com',
+    storageBucket: 'foodie-app-b6f8c.appspot.com',
+    iosBundleId: 'com.example.foodie',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDMdnEMq73rpLxdC-XUaQVJ2gUwSe_C9l0',
-    appId: '1:340672372687:ios:7d5b6c6d882960643bfcba',
-    messagingSenderId: '340672372687',
-    projectId: 'foodly-firebase-db709',
-    storageBucket: 'foodly-firebase-db709.appspot.com',
-    iosBundleId: 'com.example.foodlyFirebase.RunnerTests',
+    apiKey: 'AIzaSyDPFIFJUbnqhfj8cG9l8VqcH21ZHAvxugI',
+    appId: '1:818688899000:ios:ae7bfcf55294f89975414d',
+    messagingSenderId: '818688899000',
+    projectId: 'foodie-app-b6f8c',
+    databaseURL: 'https://foodie-app-b6f8c-default-rtdb.firebaseio.com',
+    storageBucket: 'foodie-app-b6f8c.appspot.com',
+    iosBundleId: 'com.example.foodie.RunnerTests',
   );
 }
