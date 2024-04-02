@@ -13,7 +13,20 @@
           "package_name": "com.example.foodie"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "818688899000-1k2e8rpek3pnrgrap520nc2bmahmesid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodie",
+            "certificate_hash": "55dfb744c8a9ad2c306e532bc01192539c62c122"
+          }
+        },
+        {
+          "client_id": "818688899000-0rf4grlvaa23ggcm54vkh3i498lfn4vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBOLehHwjeaNc2zwKvC9sUmnQd-nx4ciXs"
@@ -21,7 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818688899000-0rf4grlvaa23ggcm54vkh3i498lfn4vm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "818688899000-e150spnagkbu26qlgftii38t8tess4lc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.foodie.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }
