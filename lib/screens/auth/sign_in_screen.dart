@@ -274,26 +274,30 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: defaultPadding),
               SocalButton(
-                press: () {
-                  // Implement social sign in logic here
-                },
-                text: "Connect with Facebook",
-                color: const Color(0xFF395998),
-                icon: SvgPicture.asset(
-                  'assets/icons/facebook.svg',
-                  colorFilter: const ColorFilter.mode(
-                    Color(0xFF395998),
-                    BlendMode.srcIn,
+                press: () {},
+                text: "Sign Up with Apple",
+                color: Color.fromARGB(255, 8, 8, 8),
+                icon: Transform.scale(
+                  scale: 1.5, // Adjust the scale factor as needed
+                  child: SvgPicture.asset(
+                    'assets/icons/apple-black-logo-svgrepo-com.svg',
+                    colorFilter: const ColorFilter.mode(
+                      Color.fromARGB(255, 10, 10, 10),
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),
               const SizedBox(height: defaultPadding),
               SocalButton(
                 press: () => signInWithGoogle(context),
-                text: "Connect with Google",
+                text: "Sign In with Google",
                 color: const Color(0xFF4285F4),
-                icon: SvgPicture.asset(
-                  'assets/icons/google.svg',
+                icon: Transform.scale(
+                  scale: 1.5, // Adjust the scale factor as needed
+                  child: SvgPicture.asset(
+                    'assets/icons/google.svg',
+                  ),
                 ),
               ),
               const SizedBox(height: defaultPadding),

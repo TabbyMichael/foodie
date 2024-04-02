@@ -271,26 +271,35 @@ class SignUpScreen extends StatelessWidget {
               // Facebook
               SocalButton(
                 press: () {},
-                text: "Connect with Facebook",
-                color: const Color(0xFF395998),
-                icon: SvgPicture.asset(
-                  'assets/icons/facebook.svg',
-                  colorFilter: const ColorFilter.mode(
-                    Color(0xFF395998),
-                    BlendMode.srcIn,
+                text: "Sign Up with Apple",
+                color: Color.fromARGB(255, 8, 8, 8),
+                icon: Transform.scale(
+                  scale: 1.5, // Adjust the scale factor as needed
+                  child: SvgPicture.asset(
+                    'assets/icons/apple-black-logo-svgrepo-com.svg',
+                    colorFilter: const ColorFilter.mode(
+                      Color.fromARGB(255, 10, 10, 10),
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: defaultPadding),
+              // Google
+              SocalButton(
+                press: () => signUpWithGoogle(
+                    context), // Change signInWithGoogle to signUpWithGoogle
+                text: "Sign In with Google",
+                color: const Color(0xFF4285F4),
+                icon: Transform.scale(
+                  scale: 1.5, // Adjust the scale factor as needed
+                  child: SvgPicture.asset(
+                    'assets/icons/google.svg',
                   ),
                 ),
               ),
               const SizedBox(height: defaultPadding),
-              // Google
-              SocalButton(
-                press: () => signUpWithGoogle(context),
-                text: "Connect with Google",
-                color: const Color(0xFF4285F4),
-                icon: SvgPicture.asset(
-                  'assets/icons/google.svg',
-                ),
-              ),
 
               const SizedBox(height: defaultPadding),
             ],
