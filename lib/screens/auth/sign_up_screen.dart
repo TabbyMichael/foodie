@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodie/screens/auth/sign_in_screen.dart';
 import 'package:foodie/screens/auth/verification_page.dart';
+import 'package:foodie/screens/home/home_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../components/buttons/socal_button.dart';
 import '../../components/welcome_text.dart';
@@ -109,6 +111,42 @@ class SignUpScreen extends StatelessWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Failed to sign up. Please try again.')),
       );
+    }
+  }
+
+  Future<void> signUpWithGoogle(BuildContext context) async {
+    try {
+      final GoogleSignIn googleSignIn = GoogleSignIn();
+      final GoogleSignInAccount? googleSignInAccount =
+          await googleSignIn.signIn();
+
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount.authentication;
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
+
+        final UserCredential userCredential =
+            await FirebaseAuth.instance.signInWithCredential(credential);
+
+        if (userCredential.user != null) {
+          // Navigate to home screen after successful sign-up
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+          );
+        } else {
+          throw 'Failed to sign up with Google. Please try again.';
+        }
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+            content: Text('Failed to sign up with Google. Please try again.')),
+      );
+      print('Error: $e');
     }
   }
 
@@ -215,13 +253,14 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: defaultPadding),
               // Google
               SocalButton(
-                press: () {},
+                press: () => signUpWithGoogle(context),
                 text: "Connect with Google",
                 color: const Color(0xFF4285F4),
                 icon: SvgPicture.asset(
                   'assets/icons/google.svg',
                 ),
               ),
+
               const SizedBox(height: defaultPadding),
             ],
           ),
