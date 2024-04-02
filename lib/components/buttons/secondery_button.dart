@@ -4,10 +4,10 @@ import '../../constants.dart';
 
 class SeconderyButton extends StatelessWidget {
   const SeconderyButton({
-    Key? key,
+    super.key,
     required this.child,
     required this.press,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final VoidCallback press;

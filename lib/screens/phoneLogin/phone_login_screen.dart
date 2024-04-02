@@ -37,7 +37,7 @@ class _PghoneLoginScreenState extends State<PghoneLoginScreen> {
               Form(
                 key: _formKey,
                 child: TextFormField(
-                  validator: phoneNumberValidator,
+                  validator: phoneNumberValidator.call,
                   autofocus: true,
                   onSaved: (value) => _phoneNumber = value,
                   style: Theme.of(context)

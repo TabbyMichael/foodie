@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  SignInScreen({Key? key}) : super(key: key);
+  SignInScreen({super.key});
 
   Future<void> signInWithEmailAndPassword(BuildContext context) async {
     try {
@@ -138,7 +138,7 @@ class SignInScreen extends StatelessWidget {
           // Navigate to home screen
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
           );
         } else {
           throw 'Failed to sign in with Google. Please try again.';
@@ -146,7 +146,7 @@ class SignInScreen extends StatelessWidget {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
             content: Text('Failed to sign in with Google. Please try again.')),
       );
       print('Error: $e');

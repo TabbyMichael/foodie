@@ -7,7 +7,7 @@ import '../../constants.dart';
 import '../../demoData.dart';
 
 class SearchScreen extends StatefulWidget {
-  const SearchScreen({Key? key}) : super(key: key); // Added Key parameter
+  const SearchScreen({super.key}); // Added Key parameter
 
   @override
   _SearchScreenState createState() => _SearchScreenState();
@@ -94,7 +94,7 @@ class _SearchScreenState extends State<SearchScreen> {
 }
 
 class SearchForm extends StatefulWidget {
-  const SearchForm({Key? key}) : super(key: key); // Added Key parameter
+  const SearchForm({super.key}); // Added Key parameter
 
   @override
   State<SearchForm> createState() => _SearchFormState();

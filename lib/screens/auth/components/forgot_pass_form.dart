@@ -3,7 +3,7 @@ import 'package:foodie/constants.dart';
 import 'package:foodie/screens/auth/reset_email_sent_screen.dart';
 
 class ForgotPassForm extends StatefulWidget {
-  const ForgotPassForm({Key? key}) : super(key: key);
+  const ForgotPassForm({super.key});
 
   @override
   _ForgotPassFormState createState() => _ForgotPassFormState();
@@ -23,7 +23,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           // Email Field
           TextFormField(
             controller: _emailController, // Assign the controller here
-            validator: emailValidator,
+            validator: emailValidator.call,
             onSaved: (value) {},
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(hintText: "Email Address"),

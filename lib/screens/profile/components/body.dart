@@ -68,12 +68,12 @@ class Body extends StatelessWidget {
 
 class ProfileMenuCard extends StatelessWidget {
   const ProfileMenuCard({
-    Key? key,
+    super.key,
     this.title,
     this.subTitle,
     this.svgSrc,
     this.press,
-  }) : super(key: key);
+  });
 
   final String? title, subTitle, svgSrc;
   final VoidCallback? press;

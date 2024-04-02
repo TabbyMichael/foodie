@@ -4,11 +4,11 @@ import '../../../constants.dart';
 
 class RoundedCheckboxListTile extends StatelessWidget {
   const RoundedCheckboxListTile({
-    Key? key,
+    super.key,
     this.isActive = false,
     required this.press,
     required this.text,
-  }) : super(key: key);
+  });
 
   final bool isActive;
   final VoidCallback press;
@@ -44,9 +44,9 @@ class RoundedCheckboxListTile extends StatelessWidget {
 
 class CircleCheckBox extends StatelessWidget {
   const CircleCheckBox({
-    Key? key,
+    super.key,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   final bool isActive;
 

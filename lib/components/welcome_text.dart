@@ -4,8 +4,7 @@ import 'package:foodie/constants.dart';
 class WelcomeText extends StatelessWidget {
   final String title, text;
 
-  const WelcomeText({Key? key, required this.title, required this.text})
-      : super(key: key);
+  const WelcomeText({super.key, required this.title, required this.text});
   @override
   Widget build(BuildContext context) {
     return Column(

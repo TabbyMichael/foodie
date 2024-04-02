@@ -6,7 +6,7 @@ import 'package:foodie/constants.dart';
 import 'reset_email_sent_screen.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  const ForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 }
 
 class ForgotPassForm extends StatefulWidget {
-  const ForgotPassForm({Key? key}) : super(key: key);
+  const ForgotPassForm({super.key});
 
   @override
   _ForgotPassFormState createState() => _ForgotPassFormState();

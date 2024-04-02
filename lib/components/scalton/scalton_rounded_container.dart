@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class ScaltonRoundedContainer extends StatelessWidget {
   const ScaltonRoundedContainer({
-    Key? key,
+    super.key,
     this.height = double.infinity,
     this.width = double.infinity,
     this.radious = 10,
-  }) : super(key: key);
+  });
 
   final double height, width, radious;
 

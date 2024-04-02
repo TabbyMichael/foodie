@@ -5,8 +5,8 @@ import 'featured_item_card.dart';
 
 class FeaturedItems extends StatelessWidget {
   const FeaturedItems({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

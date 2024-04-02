@@ -100,7 +100,7 @@ class _BodyState extends State<Body> {
             showResult();
           } else {}
         },
-        validator: requiredValidator,
+        validator: requiredValidator.call,
         style: Theme.of(context).textTheme.labelLarge,
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(

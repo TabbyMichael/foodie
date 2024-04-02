@@ -23,7 +23,7 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           // Full Name Field
           TextFormField(
-            validator: requiredValidator,
+            validator: requiredValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: "Full Name"),
@@ -32,7 +32,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
           // Email Field
           TextFormField(
-            validator: emailValidator,
+            validator: emailValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -43,7 +43,7 @@ class _SignUpFormState extends State<SignUpForm> {
           // Password Field
           TextFormField(
             obscureText: _obscureText,
-            validator: passwordValidator,
+            validator: passwordValidator.call,
             textInputAction: TextInputAction.next,
             onChanged: (value) {},
             onSaved: (value) {},

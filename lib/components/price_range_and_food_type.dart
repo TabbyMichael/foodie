@@ -5,10 +5,10 @@ import '../constants.dart';
 
 class PriceRangeAndFoodtype extends StatelessWidget {
   const PriceRangeAndFoodtype({
-    Key? key,
+    super.key,
     this.priceRange = "\$\$",
     required this.foodType,
-  }) : super(key: key);
+  });
 
   final String priceRange;
   final List<String> foodType;

@@ -5,8 +5,8 @@ import '../../../constants.dart';
 
 class Dietaries extends StatefulWidget {
   const Dietaries({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _DietariesState createState() => _DietariesState();

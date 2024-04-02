@@ -6,7 +6,7 @@ import '../small_dot.dart';
 
 class ItemCard extends StatelessWidget {
   const ItemCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
     required this.image,
@@ -14,7 +14,7 @@ class ItemCard extends StatelessWidget {
     required this.price,
     required this.priceRange,
     required this.press,
-  }) : super(key: key);
+  });
 
   final String? title, description, image, foodType, priceRange;
   final double? price;

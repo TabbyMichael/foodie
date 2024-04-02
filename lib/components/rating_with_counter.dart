@@ -5,10 +5,10 @@ import '../constants.dart';
 
 class RatingWithCounter extends StatelessWidget {
   const RatingWithCounter({
-    Key? key,
+    super.key,
     required this.rating,
     required this.numOfRating,
-  }) : super(key: key);
+  });
 
   final double rating;
   final int numOfRating;

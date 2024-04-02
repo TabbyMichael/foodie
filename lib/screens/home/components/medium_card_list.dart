@@ -8,8 +8,8 @@ import '../../details/details_screen.dart';
 
 class MediumCardList extends StatefulWidget {
   const MediumCardList({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _MediumCardListState createState() => _MediumCardListState();

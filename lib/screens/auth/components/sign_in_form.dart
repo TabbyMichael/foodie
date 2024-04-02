@@ -23,7 +23,7 @@ class _SignInFormState extends State<SignInForm> {
       child: Column(
         children: [
           TextFormField(
-            validator: emailValidator,
+            validator: emailValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -34,7 +34,7 @@ class _SignInFormState extends State<SignInForm> {
           // Password Field
           TextFormField(
             obscureText: _obscureText,
-            validator: passwordValidator,
+            validator: passwordValidator.call,
             onSaved: (value) {},
             decoration: InputDecoration(
               hintText: "Password",

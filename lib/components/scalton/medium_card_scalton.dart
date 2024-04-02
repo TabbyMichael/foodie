@@ -5,8 +5,8 @@ import '../scalton/scalton_rounded_container.dart';
 
 class MediumCardScalton extends StatelessWidget {
   const MediumCardScalton({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

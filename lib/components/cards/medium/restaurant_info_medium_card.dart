@@ -6,14 +6,14 @@ import '../../small_dot.dart';
 
 class RestaurantInfoMediumCard extends StatelessWidget {
   const RestaurantInfoMediumCard({
-    Key? key,
+    super.key,
     required this.image,
     required this.name,
     required this.location,
     required this.rating,
     required this.delivertTime,
     required this.press,
-  }) : super(key: key);
+  });
 
   final String image, name, location;
   final double rating;

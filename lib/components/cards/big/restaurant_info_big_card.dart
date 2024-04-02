@@ -16,7 +16,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
   final VoidCallback press;
 
   const RestaurantInfoBigCard({
-    Key? key,
+    super.key,
     required this.name,
     required this.rating,
     required this.numOfRating,
@@ -25,7 +25,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
     required this.images,
     required this.foodType,
     required this.press,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return InkWell(

@@ -44,11 +44,11 @@ class PriceRange extends StatelessWidget {
 
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
-    Key? key,
+    super.key,
     this.isActive = false,
     required this.index,
     required this.press,
-  }) : super(key: key);
+  });
 
   final bool isActive;
   final int index;

@@ -4,12 +4,12 @@ import '../../../constants.dart';
 
 class OrderedItemCard extends StatelessWidget {
   const OrderedItemCard({
-    Key? key,
+    super.key,
     required this.numOfItem,
     required this.title,
     required this.description,
     required this.price,
-  }) : super(key: key);
+  });
   final int numOfItem;
   final String? title, description;
   final double? price;

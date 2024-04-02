@@ -9,8 +9,7 @@ class PrimaryButton extends StatelessWidget {
   final String text;
   final GestureTapCallback press;
 
-  const PrimaryButton({Key? key, required this.text, required this.press})
-      : super(key: key);
+  const PrimaryButton({super.key, required this.text, required this.press});
   @override
   Widget build(BuildContext context) {
     EdgeInsets verticalPadding =

@@ -4,11 +4,11 @@ import '../constants.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
-    Key? key,
+    super.key,
     this.isMainSection = true,
     required this.title,
     required this.press,
-  }) : super(key: key);
+  });
 
 // Main Section means on Home page section
   final bool isMainSection;

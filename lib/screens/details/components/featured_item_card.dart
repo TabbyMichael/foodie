@@ -5,13 +5,13 @@ import '../../../constants.dart';
 
 class FeaturedItemCard extends StatelessWidget {
   const FeaturedItemCard({
-    Key? key,
+    super.key,
     required this.foodType,
     required this.image,
     required this.priceRange,
     required this.press,
     required this.title,
-  }) : super(key: key);
+  });
 
   final String foodType, image, priceRange, title;
   final VoidCallback press;

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class ScaltonLine extends StatelessWidget {
   const ScaltonLine({
-    Key? key,
+    super.key,
     this.height = 15,
     this.width = double.infinity,
-  }) : super(key: key);
+  });
 
   final double height, width;
 

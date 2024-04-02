@@ -5,8 +5,8 @@ import '../../../constants.dart';
 
 class Categories extends StatefulWidget {
   const Categories({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _CategoriesState createState() => _CategoriesState();

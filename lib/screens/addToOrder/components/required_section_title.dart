@@ -4,9 +4,9 @@ import '../../../constants.dart';
 
 class RequiredSectionTitle extends StatelessWidget {
   const RequiredSectionTitle({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   final String title;
 

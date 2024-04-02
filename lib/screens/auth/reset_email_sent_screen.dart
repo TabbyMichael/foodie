@@ -5,7 +5,7 @@ import 'package:foodie/constants.dart';
 class ResetEmailSentScreen extends StatelessWidget {
   final String email;
 
-  const ResetEmailSentScreen({Key? key, required this.email}) : super(key: key);
+  const ResetEmailSentScreen({super.key, required this.email});
 
   @override
   Widget build(BuildContext context) {

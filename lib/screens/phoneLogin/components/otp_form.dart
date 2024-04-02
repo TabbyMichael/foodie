@@ -9,8 +9,8 @@ import '../../../components/buttons/primary_button.dart';
 
 class OtpForm extends StatefulWidget {
   const OtpForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _OtpFormState createState() => _OtpFormState();
@@ -58,7 +58,7 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) {
                     if (value.length == 1) _pin2Node!.requestFocus();
                   },
-                  validator: RequiredValidator(errorText: ''),
+                  validator: RequiredValidator(errorText: '').call,
                   autofocus: true,
                   maxLength: 1,
                   focusNode: _pin1Node,
@@ -75,7 +75,7 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) {
                     if (value.length == 1) _pin3Node!.requestFocus();
                   },
-                  validator: RequiredValidator(errorText: ''),
+                  validator: RequiredValidator(errorText: '').call,
                   maxLength: 1,
                   focusNode: _pin2Node,
                   obscureText: true,
@@ -91,7 +91,7 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) {
                     if (value.length == 1) _pin4Node!.requestFocus();
                   },
-                  validator: RequiredValidator(errorText: ''),
+                  validator: RequiredValidator(errorText: '').call,
                   maxLength: 1,
                   focusNode: _pin3Node,
                   obscureText: true,
@@ -107,7 +107,7 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) {
                     if (value.length == 1) _pin4Node!.unfocus();
                   },
-                  validator: RequiredValidator(errorText: ''),
+                  validator: RequiredValidator(errorText: '').call,
                   maxLength: 1,
                   focusNode: _pin4Node,
                   obscureText: true,
