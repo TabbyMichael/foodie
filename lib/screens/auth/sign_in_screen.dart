@@ -131,6 +131,36 @@ class SignInScreen extends StatelessWidget {
           idToken: googleSignInAuthentication.idToken,
         );
 
+        if (Platform.isIOS) {
+          showCupertinoDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return const Center(
+                child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: CupertinoActivityIndicator(),
+                ),
+              );
+            },
+          );
+        } else if (Platform.isAndroid) {
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return Center(
+                child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            },
+          );
+        }
+
         final UserCredential userCredential =
             await FirebaseAuth.instance.signInWithCredential(credential);
 

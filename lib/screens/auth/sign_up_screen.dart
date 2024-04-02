@@ -117,6 +117,37 @@ class SignUpScreen extends StatelessWidget {
   Future<void> signUpWithGoogle(BuildContext context) async {
     try {
       final GoogleSignIn googleSignIn = GoogleSignIn();
+
+      if (Platform.isIOS) {
+        showCupertinoDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return const Center(
+              child: SizedBox(
+                width: 50,
+                height: 50,
+                child: CupertinoActivityIndicator(),
+              ),
+            );
+          },
+        );
+      } else if (Platform.isAndroid) {
+        showDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return const Center(
+              child: SizedBox(
+                width: 50,
+                height: 50,
+                child: CircularProgressIndicator(),
+              ),
+            );
+          },
+        );
+      }
+
       final GoogleSignInAccount? googleSignInAccount =
           await googleSignIn.signIn();
 
